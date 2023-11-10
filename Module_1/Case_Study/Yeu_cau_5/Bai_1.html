@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sumEvenNumberInMatrix(m, n) {
+        const matrix = [];
+        for(let i = 0; i < m; i++) {
+            const row = [];
+            for (let j = 0; j < n; j++) {
+                row.push(Math.floor(Math.random()*100));
+            }
+            matrix.push(row);
+        }
+
+        let sumEven = 0;
+        for(let i = 0; i < m; i++){
+            for (let j = 0; j < n; j++){
+                if (matrix[i][j] % 2 === 0) {
+                    sumEven += matrix[i][j];
+                }
+            }
+        }
+
+        return { matrix, sumEven };
+
+    }
+
+    const m = parseInt(prompt("Nhập số hàng ngang"));
+    const n = parseInt(prompt("Nhập số hàng dọc"));
+
+    const result = sumEvenNumberInMatrix(m, n);
+
+    document.write(`Ma trận ngẫu nhiên ${result.matrix} <br>`);
+    document.write(` Tổng các số chẳn có trong ma trận là ${result.sumEven}`);
+
+
+</script>
+</body>
+</html>

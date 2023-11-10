@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+
+
+    function factorial(n) {
+        if (n === 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1)
+        }
+    }
+
+    let inputNumber = parseInt(prompt("Nhập số nguyên mà bạn muốn tính giai thừa vào đây: "));
+    let result = factorial(inputNumber);
+
+    alert("Giai thừa của " + inputNumber + " là " + result );
+
+</script>
+</body>
+</html>

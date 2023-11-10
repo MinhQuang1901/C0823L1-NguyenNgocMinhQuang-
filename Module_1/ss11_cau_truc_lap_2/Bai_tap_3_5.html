@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3-5</title>
+</head>
+<body>
+<script>
+    let F = 0, F1 = 0, F0 = 0
+    let tong20So = 0
+    let fibonacci =""
+    for (let i=0;;i++) {
+        if (i===0){
+            F=1
+            F1=1
+            fibonacci += F +" "
+            tong20So += F
+        } else {
+            F=F1
+            F1=F0
+            fibonacci += F +" "
+            tong20So += F
+            console.log(i + " = " +F)
+
+        }
+    }
+    document.write("Dãy fibonacci là" +fibonacci + "<br>")
+    document.write("Tổng của các số = "+ tong20So)
+</script>
+</body>
+</html>

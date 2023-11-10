@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var input = prompt("Nhập chữ vào đây");
+    var index = Array.from(input); //Chuyển chuỗi thành mảng ký tự
+    var reversedIndex = index.slice().reverse(); // Tạo một bản sao của mảng và đảo ngược nó
+
+    document.writeln("Mảng gốc: " + index + "<br>");
+    document.writeln("Mảng đảo ngược: " + reversedIndex.join(""));
+</script>
+</body>
+</html>

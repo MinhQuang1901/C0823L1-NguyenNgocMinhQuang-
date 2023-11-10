@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu đồ uống</title>
+    <link rel="stylesheet" type="text/css" href="Menu_drinks.css">
+</head>
+
+<body>
+<h1 style="text-align: center">Menu đồ uống</h1>
+<div>
+    <table class="drinks">
+        <tr>
+            <th style="text-align: center">ĐỒ UỐNG</th>
+            <th style="text-align: center">GIÁ</th>
+        </tr>
+        <tr>
+            <th class="th1">1. Cafe</th>
+            <th class="th1">15,000</th>
+            <th><button id="btn1" onclick="orderDrink(1)">Chọn</button></th>
+        </tr>
+        <tr>
+            <th class="th1">2. Cam vắt</th>
+            <th class="th1">20,000</th>
+            <th><button id="btn2" onclick="orderDrink(2)">Chọn</button></th>
+        </tr>
+        <tr>
+            <th class="th1">3. Nước ép cà rốt</th>
+            <th class="th1">20,000</th>
+            <th><button id="btn3" onclick="orderDrink(3)">Chọn</button></th>
+        </tr>
+        <tr>
+            <th class="th1">4. Nước ép cà chua</th>
+            <th class="th1">20,000</th>
+            <th><button id="btn4" onclick="orderDrink(4)">Chọn</button></th>
+        </tr>
+        <tr>
+            <th class="th1">5. Nước lọc</th>
+            <th class="th1">10,000</th>
+            <th><button id="btn5" onclick="orderDrink(5)">Chọn</button></th>
+        </tr>
+        <tr>
+            <th class="th1">6. Nước dừa</th>
+            <th class="th1">25,000</th>
+            <th><button id="btn6" onclick="orderDrink(6)">Chọn</button></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th><button id="btn7" onclick="printBill()">In Hóa Đơn</button></th>
+        </tr>
+    </table>
+<div id = "root">
+    </div>
+
+</div>
+
+<script src="Menu_drinks.js"></script>
+</body>
+</html>
+

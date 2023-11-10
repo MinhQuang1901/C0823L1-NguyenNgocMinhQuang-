@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7-5</title>
+</head>
+<body>
+<script>
+    var a = parseFloat(prompt("Nhập điểm bài kiểm tra 15 phút"));
+    var b = parseFloat(prompt("Nhập điểm thi giữa kỳ"));
+    var c = parseFloat(prompt("Nhập điểm thi cuối kỳ"));
+
+    if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+        var diemtrungbinh = (a + b + c) / 3;
+        var hanghocluc;
+
+        if (diemtrungbinh >= 9.0) {
+            hanghocluc = "Xuất sắc";
+        } else if (diemtrungbinh >= 8.0) {
+            hanghocluc = "Giỏi";
+        } else if (diemtrungbinh >= 6.5) {
+            hanghocluc = "Khá";
+        } else if (diemtrungbinh >= 5.0) {
+            hanghocluc = "Trung bình";
+        } else {
+            hanghocluc = "Yếu";
+        }
+        document.write("Điểm trung bình của bạn là: " + diemtrungbinh);
+        document.write(". Xếp loại hạng học lực: " + hanghocluc);
+
+    } else {
+        document.write("Vui lòng nhập điểm hợp lệ.");
+    }
+</script>
+</body>
+</html>

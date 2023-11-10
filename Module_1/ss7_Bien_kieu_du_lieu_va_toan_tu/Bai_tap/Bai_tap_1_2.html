@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi độ C sang độ F</title>
+</head>
+<body>
+<input type="text" id="celsiusInput" placeholder="Độ C (Celsius)">
+<button onclick="convertToCelsiusToFahrenheit()">Chuyển đổi</button>
+<p id="result"></p>
+
+<script>
+    function convertToCelsiusToFahrenheit() {
+        var celsiusValue = parseFloat(document.getElementById("celsiusInput").value);
+        var fahrenheitValue = (celsiusValue * 9/5) + 32;
+        document.getElementById("result").innerHTML = "Kết quả: " + fahrenheitValue + " độ F";
+    }
+</script>
+</body>
+</html>

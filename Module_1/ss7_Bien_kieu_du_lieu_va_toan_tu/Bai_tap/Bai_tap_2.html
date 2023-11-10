@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form id="currencyConverter">
+    <table>
+        <tr>
+            <th><label>Amount</label></th>
+            <th><label>From Currency</label></th>
+            <th><label>To Currency</label></th>
+        </tr>
+        <tr>
+            <td><input type="text" id="dauvao"></td>
+            <td>
+                <select name="select1" id="select1">
+                    <option value="a">VNĐ</option>
+                    <option value="b">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="select2" id="select2">
+                    <option value="a">VNĐ</option>
+                    <option value="b">USD</option>
+                </select>
+            </td>
+            <td><button type="button" onclick="convertCurrency()">Convert</button></td>
+        </tr>
+    </table>
+    <p id="result"></p>
+    <script>
+        function convertCurrency(){
+            const inputValue = parseFloat(document.getElementById('dauvao').value);
+            const fromCurrency = document.getElementById('select1').value;
+            const toCurrency = document.getElementById('select2').value;
+            const resultElement = document.getElementById("result");
+
+            if (isNaN(inputValue)) {
+                resultElement.innerHTML = "Please enter a valid amount";
+                return;
+            }
+
+            if (fromCurrency === toCurrency) {
+                resultElement.innerHTML = "Result: " + inputValue + " " + (fromCurrency === 'a' ? 'VNĐ' : 'USD');
+            } else if (fromCurrency === 'a' && toCurrency === 'b') {
+                const result = inputValue / 24000;
+                resultElement.innerHTML = "Result: " + result.toFixed(2) + " USD";
+            } else if (fromCurrency === 'b' && toCurrency === 'a') {
+                const result = inputValue * 24000;
+                resultElement.innerHTML = "Result: " + result.toFixed(2) + " VNĐ";
+            }
+        }
+    </script>
+</form>
+</body>
+</html>

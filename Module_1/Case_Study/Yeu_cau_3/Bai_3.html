@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function maxFraction(numberators, denominators) {
+        let maxFractionIndex = 0;
+        let maxFractionValue = numberators[0] / denominators[0];
+
+        for (let i = 1; i < numberators.length; i++) {
+            let currentFractionValue = numberators[i] / denominators[i];
+            if(currentFractionValue > maxFractionIndex) {
+                maxFractionIndex = i;
+                maxFractionValue = currentFractionValue;
+            }
+        }
+
+        return maxFractionIndex;
+    }
+
+    var inputNumberOne = prompt("Nhập dãy số đầu tiên vào đây");
+    var inputArrOne = inputNumberOne.split(",").map(Number);
+
+
+    var inputNumberTwo = prompt("Nhập dãy số thứ 2 vào đây");
+    var inputArrTwo = inputNumberTwo.split(",").map(Number);
+
+    var result = maxFraction(inputArrOne,inputArrTwo);
+
+    alert("Chỉ số của phân số lớn nhất là: " + result);
+
+</script>
+</body>
+</html>

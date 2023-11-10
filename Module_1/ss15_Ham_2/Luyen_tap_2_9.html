@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let ArrayCharacter = ["Mai" , "cưới", "luôn"];
+    function checkCharacter (character) {
+        if (ArrayCharacter.includes(character)) {
+            return character;
+        } else {
+            return " -1 "
+        }
+    }
+
+
+    let inputCharacter = prompt("Nhập ký tự bạn muốn vào đây:");
+    let result = checkCharacter(inputCharacter);
+
+    document.write("Hàm đã cho là: " + ArrayCharacter + "<br>")
+    document.write("Kết quả: " + result);
+
+</script>
+</body>
+</html>

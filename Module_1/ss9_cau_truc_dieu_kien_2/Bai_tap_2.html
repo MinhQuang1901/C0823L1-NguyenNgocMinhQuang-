@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch-Case</title>
+</head>
+<body>
+<h1>Kiểm tra số ngày trong tháng</h1>
+<form id="Dateofmonth">
+    <input type="number" id="enterthemonth" placeholder="Nhập tháng">
+    <button type="button" onclick="kq()">Check</button>
+    <p id="ketqua"></p>
+    <br>
+    <br>
+    <script>
+        function kq() {
+            var month = parseInt(document.getElementById('enterthemonth').value);
+            var daysInMonth;
+
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    daysInMonth = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    daysInMonth = 30;
+                    break;
+                case 2:
+                    daysInMonth = '28 hoặc 29 ';
+                    break;
+                default:
+                    daysInMonth = -1;
+                    break;
+            }
+            if (daysInMonth === -1) {
+                document.getElementById('ketqua').textContent = "Tháng không hợp lệ, vui lòng nhập lại";
+            } else {
+                document.getElementById('ketqua').textContent = "Tháng " + month + " có " + daysInMonth + " ngày ";
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
+

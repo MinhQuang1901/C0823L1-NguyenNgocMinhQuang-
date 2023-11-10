@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("Nhập chữ vào đây: ");
+    let result = "";
+
+    for (let i = 0; i <chuoi.length; i++) {
+        let kytu = chuoi.charAt(i);
+
+        if (kytu === kytu.toLowerCase()) {
+            result += kytu.toUpperCase();
+        } else {
+            result += kytu.toLowerCase();
+        }
+    }
+    document.writeln(result);
+</script>
+</body>
+</html>

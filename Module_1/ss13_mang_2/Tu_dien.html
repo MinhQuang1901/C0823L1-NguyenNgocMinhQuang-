@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<form id="searchForm">
+    <label>Nhập từ</label>
+    <input type="text" id="searchInput" placeholder="Từ tiếng Anh">
+    <button type="submit">Dịch</button>
+</form>
+<p id="result"></p>
+
+<script>
+    debugger
+    // Tạo mảng các từ tiếng Anh
+    let englishWords = ["apple", "banana", "cat", "dog", "elephant"];
+
+    // Tạo mảng các từ tiếng Việt tương ứng
+    let vietnameseWords = ["quả táo", "quả chuối", "con mèo", "con chó", "con voi"];
+
+    let searchForm = document.getElementById("searchForm");
+    let searchInput = document.getElementById("searchInput");
+    let result = document.getElementById("result");
+
+    searchForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+        const searchTerm = searchInput.value.toLowerCase();
+        const index = englishWords.indexOf(searchTerm);
+
+        if (index !== -1) {
+            const vietnameseTranslation = vietnameseWords[index];
+            result.textContent = `Từ tiếng Việt tương ứng: ${vietnameseTranslation}`;
+        } else {
+            result.textContent = "Không tìm thấy từ này trong danh sách.";
+        }
+    });
+
+</script>
+</body>
+</html>

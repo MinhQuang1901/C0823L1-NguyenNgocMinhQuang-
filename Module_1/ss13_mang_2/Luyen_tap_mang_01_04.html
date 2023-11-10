@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var inputNum = prompt("Nhập số nguyên dương bạn muốn đảo ngược vào đây");
+    var length = inputNum.length;
+    var reversedArray = [];
+    for (var i = length - 1; i>=0 ; i--) {
+        reversedArray.push(inputNum[i]);
+    }
+    document.write("Mảng bạn nhập: ",inputNum + "<br>");
+    document.write("Mảng đảo ngược: ",reversedArray.join(""));
+
+</script>
+</body>
+</html>

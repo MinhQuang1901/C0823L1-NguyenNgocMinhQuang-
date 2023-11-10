@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [];
+    while (num.length <10) {
+        let randomInt = Math.floor(Math.random() * 20);
+        if (!num.includes(randomInt)) {             //.includes giúp tìm ra giá trị nào đã có từ trước
+        num.push(randomInt)
+        };
+    }
+    document.write(`Mảng số nguyên khác nhau: ${num}` + "<br>")
+
+    let max = num[0]; // Giả sử phần tử đầu tiên là lớn nhất, gọi xong đem đi so sánh với từng phần tử sau
+    let maxIndex = 0; // Giả sử đây là phần tử lớn nhất, ban đầu là 0
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] > max){
+            max = num[i]; // Cập nhập giá trị lớn nhất
+            maxIndex = i; // Cập nhập vị trí của phần tử lớn nhất
+        }
+    }
+    document.write(`Giá trị lớn nhất trong mảng là: ${max}`+ "<br>");
+    document.write(`Vị trí của phần tử lớn nhất trong mảng là: ${maxIndex}`)
+</script>
+</body>
+</html>

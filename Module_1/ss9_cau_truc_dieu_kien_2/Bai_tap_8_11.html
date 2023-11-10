@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 8-11</title>
+</head>
+<body>
+<script>
+    var input = prompt("Nhập lương của bạn vào đây:");
+    var thue = 0;
+
+    if (input > 0 && input <= 5) {
+        thue = 0.05 * input;
+    } else if (input > 5 && input <= 10) {
+        thue = 0.1 * input - 0.25;
+    } else if (input > 10 && input <= 18) {
+        thue = 0.15 * input - 0.75;
+    } else if (input > 18 && input <= 32) {
+        thue = 0.2 * input - 1.65;
+    } else if (input > 32 && input <= 52) {
+        thue = 0.25 * input - 3.25;
+    } else if (input > 52 && input <= 80) {
+        thue = 0.3 * input - 5.85;
+    } else if (input > 80) {
+        thue = 0.35 * input - 9.85;
+    }
+    alert("Số tiền thuế thu nhập cá nhân hằng tháng của bạn cần phải đóng là: " + thue.toFixed(2) + " triệu");
+</script>
+</body>
+</html>

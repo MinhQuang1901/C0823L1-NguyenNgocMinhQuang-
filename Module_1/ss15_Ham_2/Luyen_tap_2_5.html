@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let inputNumberOne = parseInt(prompt("Nhập 3 số nguyên bất kỳ vào đây, số đầu tiên "));
+    let inputNumberTwo = parseInt(prompt("Nhập 3 số nguyên bất kỳ vào đây, số thứ hai "));
+    let inputNumberThree = parseInt(prompt("Nhập 3 số nguyên bất kỳ vào đây, số thứ ba "));
+
+
+    function smallestValue (a, b, c) {
+        return Math.min(a, b, c);
+    }
+
+    let result = smallestValue(inputNumberOne, inputNumberTwo, inputNumberThree);
+    alert("Giá trị nhỏ nhất của 3 số nguyên là " + result);
+</script>
+</body>
+</html>

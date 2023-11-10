@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Hàm chuẩn hóa xâu ký tự
+    function normalizeString(inputString) {
+        const words = inputString.split(' ');
+
+        const normalizedWords = words.filter(word => word !== '').map(word => {
+            const firstChar = word.charAt(0).toUpperCase();
+            const restOfWord = word.slice(1).toLowerCase();
+            return firstChar + restOfWord;
+        });
+
+
+        return normalizedWords.join(' ');
+    }
+
+    // Hàm tìm từ dài nhất trong xâu ký tự
+    function findLongestWord(inputString) {
+        // Tách xâu thành các từ dựa trên khoảng trắng
+        const words = inputString.split(' ');
+
+        // reduce để tìm từ dài nhất
+        const longestWord = words.reduce((longest, current) => {
+            return current.length > longest.length ? current : longest;
+        }, '');
+
+        return longestWord;
+    }
+
+    // Hàm main để nhập xâu từ bàn phím và thực hiện các thao tác
+    function main() {
+        const inputString = prompt('Nhập xâu ký tự:');
+
+        const normalized = normalizeString(inputString);
+        document.write('Xâu sau khi chuẩn hóa:', normalized + "<br>");
+
+        const longestWord = findLongestWord(inputString);
+        document.write('Từ dài nhất trong xâu:', longestWord);
+    }
+
+    main();
+
+</script>
+</body>
+</html>

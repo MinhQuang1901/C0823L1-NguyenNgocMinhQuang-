@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3-8</title>
+</head>
+<body>
+<button onclick="doanso()">Bắt đầu</button>
+<script>
+    function doanso() {
+        let count =0;
+        let phamvi = Number(prompt("Trò chơi đoán số từ 0 - "))
+        let nhapso = Number(prompt("Nhập vào số muốn đoán"))
+        let soRamdom
+        if (phamvi) {
+            soRamdom = Math.floor(Math.random() * phamvi)
+
+            if (soRamdom == nhapso) {
+                alert("Bạn đã đoán đúng")
+            } else if (soRamdom < nhapso) {
+                while (soRamdom != nhapso && soRamdom < nhapso) {
+                    alert("Bạn đoán sai số, số bạn đoán nhỏ hơn ")
+                    nhapso = Number(prompt("Nhập vào số muốn đoán"))
+
+                }
+                alert("Bạn đoán đúng")
+            } else if (soRamdom > nhapso) {
+                while (soRamdom != nhapso && soRamdom > nhapso) {
+                    alert("Bạn đoán sai số, số bạn đoán lớn hơn ")
+                    nhapso = Number(prompt("Nhập vào số muốn đoán"))
+                }
+                alert("Bạn đoán đúng")
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(s1, s2) {
+        let count_s1 = new Array(26).fill(0);
+        for (let char of s1) {
+            count_s1[char.charCodeAt(0) - 'a'.charCodeAt(0)] += 1;
+        }
+
+        let commonCount = 0;
+        for (let char of s2) {
+            if (count_s1[char.charCodeAt(0) - 'a'.charCodeAt(0)] > 0) {
+                commonCount += 1;
+                count_s1[char.charCodeAt(0) - 'a'.charCodeAt(0)] -= 1;
+            }
+        }
+
+        return commonCount;
+    }
+
+    let s1 = prompt("Nhập kí tự s1 vào đây");
+    let s2 = prompt("Nhập kí tự s2 vào đây");
+    let result = commonCharacterCount(s1, s2);
+    alert(`2 mảng bạn nhập có ${result} chữ kí tự chung`);
+
+</script>
+</body>
+</html>

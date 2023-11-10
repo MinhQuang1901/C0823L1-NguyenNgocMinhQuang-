@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = [];
+    var b = [];
+    for (var i = 0; i < 10; i++) {
+        a[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng a:"));
+    }
+    for (var i = 0; i < 10; i++) {
+        b[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng b:"));
+    }
+    var c = new Array(20);
+
+    // Nối mảng a và b vào mảng c
+    for (var i = 0; i < 10; i++) {
+       c[i] = a[i];
+       c[i + 10] = b[i];
+    }
+    c=a.concat(b);
+
+    // Hiển thị mảng c
+    document.writeln("Mảng c sau khi nối:");
+    document.writeln(c);
+</script>
+
+</body>
+</html>

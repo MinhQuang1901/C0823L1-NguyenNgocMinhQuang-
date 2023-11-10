@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMissingValue(arrayA,arrayB) {
+        const setA = new Set(arrayA);
+
+        const setB = new Set(arrayB);
+
+        const missingValue = [];
+
+        for (const value of setB) {
+            if (!setA.has(value)) {
+                missingValue.push(value);
+            }
+        }
+
+        return missingValue.sort((a, b) => a - b);
+    }
+
+    const inputA = prompt("Nhập số vào đây").toLowerCase()
+    const inputB = prompt("Nhập số vào đây").toLowerCase()
+
+    const arrayA = inputA.split(",").map(Number);
+    const arrayB = inputB.split(",").map(Number);
+    const missingValueResult = findMissingValue(arrayA,arrayB);
+
+    document.write(`Giá trị A : ${arrayA}` + "<br>");
+    document.write(`Giá trị B: ${arrayB}` + "<br>");
+    document.write(`Giá trị còn thiếu là: ${missingValueResult}`)
+
+</script>
+</body>
+</html>

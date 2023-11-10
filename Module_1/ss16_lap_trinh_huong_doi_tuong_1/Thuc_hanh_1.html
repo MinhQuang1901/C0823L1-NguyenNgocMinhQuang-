@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+<script>
+    // Định nghĩa lớp Date
+    function MyDate(day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+    };
+
+    let inputDay = parseInt(prompt("Nhập ngày vào đây"));
+    let inputMonth = parseInt(prompt("Nhập tháng vào đây"));
+    let inputYear = parseInt(prompt("Nhập năm vào đây"));
+
+
+
+    // Tạo một đối tượng Date
+    let date = new MyDate(inputDay, inputMonth, inputYear);
+
+    // Lấy thông tin ngày, tháng, năm
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+
+    // Hiển thị thông tin ngày tháng năm
+    alert(day + "/" + month + "/" + year);
+</script>
+</body>
+</html>

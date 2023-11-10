@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [];
+    for (let i = 0; i<20; i++) {
+        num.push(Math.floor(Math.random()*100));
+    }
+    document.write("Mảng số nguyên: " + num + "<br>");
+
+    let max = num[0]; // Giả sử đây là giá trị lớn nhất
+    for (let i = 0; i <num.length ; i++) {
+        if (num[i]>max) {
+            max = num[i];
+        }
+    }
+    document.write(`Giá trị lớn nhất trong mảng trên là: ${max}` + "<br>");
+
+    let total = 0;
+    for(let i =0; i< num.length; i++) {
+        total += num[i];     // Cộng từng giá trị trong mảng lại
+    }
+
+    let medium = total / num.length
+
+    document.write("Giá trị trung bình của mảng là: ",medium)
+</script>
+</body>
+</html>

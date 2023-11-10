@@ -1,0 +1,60 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number){
+        if (number <= 1) { // <
+            return false;
+        }
+
+        if (number <= 3) { // số 2 và 3
+            return true;
+        }
+
+        if (number % 2 === 0) {
+            return false;
+        }
+
+        debugger
+        for (let i = 5; i * i <= number; i += 6) {
+            if (number % i === 0 || number % (i + 2) === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function findPrimeInMatrix(matrix){
+        const primeNumbers = [];
+
+        for (let i = 0; i <matrix.length; i++){
+            for (let j = 0; j < matrix.length; j++) {
+                const number = matrix[i][j];
+                if (isPrime(number)){
+                    primeNumbers.push(number);
+                }
+            }
+        }
+
+        return primeNumbers;
+    }
+
+    const matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [11,88,113]
+    ];
+
+    const primeNumbersInMatrix = findPrimeInMatrix(matrix);
+
+    alert(` Các số ng tố trong mảng 2D: ${primeNumbersInMatrix}`);
+
+</script>
+</body>
+</html>
+

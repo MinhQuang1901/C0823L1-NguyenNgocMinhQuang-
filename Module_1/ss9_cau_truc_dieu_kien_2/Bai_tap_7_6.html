@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7-6</title>
+</head>
+<body>
+<script>
+    function tinhHoaHong(doanhSo) {
+        const mucGiai = [
+            { muc: 1, phanTram: 0.05, gioiHan: 10000 },
+            { muc: 2, phanTram: 0.1, gioiHan: 20000 },
+            { muc: 3, phanTram: 0.15, gioiHan: 30000 },
+            { muc: 4, phanTram: 0.2, gioiHan: 50000 },
+        ];
+
+        let hoaHong = 0;
+        for (let i = 0; i < mucGiai.length; i++) {
+            const muc = mucGiai[i];
+
+            if (doanhSo <= muc.gioiHan) {
+                hoaHong += doanhSo * muc.phanTram;
+                break;
+            } else {
+                hoaHong += muc.gioiHan * muc.phanTram;
+                doanhSo -= muc.gioiHan;
+            }
+        }
+        return hoaHong;
+    }
+
+    const doanhSoBanHang = 25000;
+    const hoaHong = tinhHoaHong(doanhSoBanHang);
+    console.log(`Hoa hồng cho mức doanh số ${doanhSoBanHang} là: ${hoaHong}`);
+</script>
+</body>
+</html>

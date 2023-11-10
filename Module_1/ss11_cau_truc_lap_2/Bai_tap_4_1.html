@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonacci</title>
+</head>
+<body>
+<h1>DÃY SỐ FIBONACI</h1>
+<script>
+    let f0 = 0, f1 = 1; // Khởi tạo hai số Fibonacci đầu tiên
+
+    let fibonaci = ""; // Chuỗi để lưu các số Fibonacci
+
+    for (let i = 0; i < 50; i++) { // Dùng một vòng lặp để tính số Fibonacci
+        let f = f0 + f1; // Tính số Fibonacci tiếp theo
+        fibonaci += f + "<br>"; // Thêm số Fibonacci vào chuỗi fibonaci
+        f0 = f1;
+        f1 = f;
+    }
+    document.write(fibonaci); // Hiển thị chuỗi fibonaci lên trang web
+</script>
+</body>
+</html>

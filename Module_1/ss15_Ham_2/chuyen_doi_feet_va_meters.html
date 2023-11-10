@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><input type="number" id="inputFtoM" placeholder="Nhập đơn vị foot vào"
+       oninput="unitConversionFtoM(this.value)"
+       onchange="unitConversionFtoM(this.value)">
+    foot =
+    <span id="outputmeter"></spanid></span> meet</p>
+
+<p><input type="number" id="inputMtoF" placeholder="Nhập đơn vị meet vào"
+          oninput="unitConversionMtoF(this.value)"
+          onchange="unitConversionMtoF(this.value)">
+    meet =
+    <span id="outputfoot"></spanid></span> foot</p>
+
+<script>
+    function convertMToF(number) {
+        var result =  0.305 * number;
+        return result;
+    }
+    function unitConversionFtoM() {
+        var input = document.getElementById("inputFtoM").value;
+        var result = convertMToF(input);
+        document.getElementById("outputmeter").innerHTML = result;
+    }
+
+    function convertMtoF(number) {
+        var result =  3.279 * number;
+        return result;
+    }
+
+    function unitConversionMtoF() {
+        var input = document.getElementById("inputMtoF").value;
+        var result = convertMtoF(input);
+        document.getElementById("outputfoot").innerHTML = result;
+    }
+
+
+</script>
+</body>
+</html>

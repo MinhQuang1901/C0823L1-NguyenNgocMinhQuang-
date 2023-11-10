@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4-2</title>
+</head>
+<body>
+<script>
+    function factorialLoop(n) {
+        let nResult = 1;
+        for (let i = 1; i <= n; i++) {
+            nResult *= i;
+        }
+        return nResult;
+    }
+
+    let userInput = parseInt(prompt("Nhập số nguyên dương để tính giai thừa:"));
+
+    if (!isNaN(userInput) && userInput >= 0) {
+        let result = factorialLoop(userInput);
+        alert(`Giai thừa của ${userInput} là ${result}`);
+    } else {
+        alert("Vui lòng nhập một số nguyên dương hợp lệ.");
+    }
+</script>
+</body>
+</html>

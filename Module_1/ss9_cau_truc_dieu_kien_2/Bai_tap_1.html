@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+
+<label for="weight">Nhập cân nặng: (kg)</label>
+<input type="text" id="weight"><br><br>
+
+<label for="height">Nhập chiều cao: (m)</label>
+<input type="text" id="height"><br><br>
+
+<button onclick="test()">Kiểm tra</button>
+<p id="result"></p>
+
+<script>
+    function test() {
+        var a = parseFloat(document.getElementById("weight").value);
+        var b = parseFloat(document.getElementById("height").value);
+        var c = a / (b * b);
+
+        if (c < 18.5) {
+            document.getElementById('result').textContent = 'Chỉ số BMI của bạn là:' + c + ' . Bạn gầy vc, ăn cho béo lên nhóooooo :>'
+        } else if (c >= 18.5 && c < 25) {
+            document.getElementById('result').textContent = 'Chỉ số BMI của bạn là:' + c + ' . Bạn đang có 1 body tuyệt vời, không thừa, không béo :>'
+        } else if (c >= 25 && c < 30) {
+            document.getElementById('result').textContent = 'Chỉ số BMI của bạn là:' + c + ' . Bạn đang thừa cân, siêng tập thể dục 1 xíu là được nè :>'
+        } else {
+            document.getElementById('result').textContent = 'Chỉ số BMI của bạn là:' + c + ' . Bạn béo phì rồi, giảm cân gấp, không là tèo :<'
+        }
+    }
+</script>
+</form>
+</body>
+</html>

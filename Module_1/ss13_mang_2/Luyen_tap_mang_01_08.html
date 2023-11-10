@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Sắp xếp mảng theo thứ tự giảm dần</h1>
+<label for="arrayInput">Nhập 10 số nguyên, cách nhau bằng dấu phẩy: </label>
+<input type="text" id="arrayInput">
+<br>
+<button onclick="sortArray()">sắp xếp</button>
+<p id="result"></p>
+
+<script>
+    function sortArray() {
+
+        var arrayInput = document.getElementById("arrayInput").value;
+
+
+        var integerArray = arrayInput.split(',').map(function(item) {
+            return parseInt(item.trim());
+        });
+
+
+        integerArray.sort(function(a, b) {
+            return b - a;
+        });
+
+
+        document.getElementById("result").textContent = "Mảng được sắp xếp (Thứ tự giảm dần): " + integerArray.join(', ');
+    }
+</script>
+</body>
+</html>

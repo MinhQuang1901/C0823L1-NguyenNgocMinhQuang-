@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<script>
+    // Khởi tạo một mảng số nguyên gồm 10 phần tử ngẫu nhiên
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr.push(Math.floor(Math.random() * 20)); // Số nguyên ngẫu nhiên từ 0 đến 19, Math.floor để làm tròn chữ số.
+    }
+
+    document.write("Mảng số nguyên:", arr,"<br>","<br>");
+
+    // Đếm số lượng số nguyên lớn hơn hoặc bằng 10
+
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 10) {
+            count++;
+        }
+    }
+
+    document.write(`Số lượng số nguyên lớn hơn hoặc bằng 10 là ${count} số`);
+
+</script>
+</body>
+</html>
+

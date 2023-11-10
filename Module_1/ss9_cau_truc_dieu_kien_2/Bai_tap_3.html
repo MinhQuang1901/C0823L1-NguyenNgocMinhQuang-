@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form>
+    <input type="text" id="inputnumber">
+    <br><br>
+    <table>
+        <tr>
+            <td><button type="button" name="bth" value="1" onclick="inputValue(this.value)">1</button></td>
+            <td><button type="button" name="bth" value="2" onclick="inputValue(this.value)">2</button></td>
+            <td><button type="button" name="bth" value="3" onclick="inputValue(this.value)">3</button></td>
+            <td><button type="button" name="op" value="+" onclick="inputValue(this.value)">+</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" name="bth" value="4" onclick="inputValue(this.value)">4</button></td>
+            <td><button type="button" name="bth" value="5" onclick="inputValue(this.value)">5</button></td>
+            <td><button type="button" name="bth" value="6" onclick="inputValue(this.value)">6</button></td>
+            <td><button type="button" name="op" value="-" onclick="inputValue(this.value)">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" name="bth" value="7" onclick="inputValue(this.value)">7</button></td>
+            <td><button type="button" name="bth" value="8" onclick="inputValue(this.value)">8</button></td>
+            <td><button type="button" name="bth" value="9" onclick="inputValue(this.value)">9</button></td>
+            <td><button type="button" name="op" value="*" onclick="inputValue(this.value)">*</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="clearInput();">AC</button></td>
+            <td><button type="button" name="bth" value="0" onclick="inputValue(this.value)">0</button></td>
+            <td><button type="button" name="reusult" value="=" onclick="calculateResult();">=</button></td>
+            <td><button type="button" name="op" value="/" onclick="inputValue(this.value)">/</button></td>
+        </tr>
+    </table>
+</form>
+    <script>
+        var input = document.getElementById("inputnumber");
+        function inputValue(value) {
+            input.value += value;
+        }
+        function clearInput() {
+            input.value = "";
+        }
+        function calculateResult() {
+            try {
+                input.value = eval(input.value);
+            } catch (error) {
+                input.value = "Lỗi";
+            }
+        }
+    </script>
+</body>
+</html>

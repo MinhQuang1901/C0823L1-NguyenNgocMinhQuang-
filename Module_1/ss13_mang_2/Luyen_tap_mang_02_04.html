@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function demSoTuTrongChuoi(chuoi) {
+        // Sử dụng phương thức split() để tách chuỗi thành các từ dựa trên khoảng trắng
+        var cacTu = chuoi.split(" ");
+
+        // Sử dụng thuộc tính length để đếm số lượng từ trong mảng các từ
+        var soTu = cacTu.length;
+
+        return soTu;
+    }
+
+    // Sử dụng hàm để đếm số từ trong một chuỗi
+    var chuoi = prompt("Nhập chuỗi vào đây");
+    var soTu = demSoTuTrongChuoi(chuoi);
+
+    document.writeln("Chuỗi đã cho là: ",chuoi + "<br>")
+
+    document.writeln("Số từ trong chuỗi là: " + soTu);
+
+</script>
+</body>
+</html>

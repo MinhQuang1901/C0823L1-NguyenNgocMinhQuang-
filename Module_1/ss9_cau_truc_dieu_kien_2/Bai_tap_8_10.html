@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình giá điện</title>
+</head>
+<body>
+<script>
+    var a = parseFloat(prompt("Nhập số kWh mà bạn thường hay sử dụng vào"));
+    var giaDien = 0;
+    var Bacdien = 0;
+
+    if (a >= 0 && a <= 50) {
+        giaDien = a * 1.728;
+        Bacdien = 1;
+    } else if (a > 50 && a <= 100) {
+        giaDien = 50 * 1.728 + (a - 50) * 1.786;
+        Bacdien = 2;
+    } else if (a > 100 && a <= 200) {
+        giaDien = 50 * 1.728 + 50 * 1.786 + (a - 100) * 2.074;
+        Bacdien = 3;
+    } else if (a > 200 && a <= 300) {
+        giaDien = 50 * 1.728 + 50 * 1.786 + 100 * 2.074 + (a - 200) * 2.612;
+        Bacdien = 4;
+    } else if (a > 300 && a <= 400) {
+        giaDien = 50 * 1.728 + 50 * 1.786 + 100 * 2.074 + 100 * 2.612 + (a - 300) * 2.919;
+        Bacdien = 5;
+    } else if (a > 400) {
+        giaDien = 50 * 1.728 + 50 * 1.786 + 100 * 2.074 + 100 * 2.612 + 100 * 2.919 + (a - 400) * 3.015;
+        Bacdien = 6;
+    }
+
+    document.write("Số tiền điện bạn phải trả là: " + giaDien.toFixed(2) + " đồng/kWh. Vậy nên bạn hãy sài điện bậc " + Bacdien);
+</script>
+</body>
+</html>

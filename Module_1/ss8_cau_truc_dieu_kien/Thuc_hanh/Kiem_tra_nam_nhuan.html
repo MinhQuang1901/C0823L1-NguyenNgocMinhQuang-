@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Năm Nhuận</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("inter a year"))
+
+    if (a % 4 ==0) {
+        if (a % 100 ==0) {
+            if (a % 400 ==0) {
+                alert(a + " is a leap year");
+            } else {
+                alert(a + " is NOT a leap year");
+            }
+        }else {
+            alert(a + " is NOT a leap year");
+        }
+    }else  {
+        alert(a + " is NOT a leap year");
+    }
+</script>
+</body>
+</html>

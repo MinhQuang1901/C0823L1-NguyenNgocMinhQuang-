@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui</title>
+</head>
+<body>
+<h1>Type anything slowly</h1>
+<form id="frame">
+    <textarea name="txt" cols="35" rows="5" id="textInput"></textarea>
+</form>
+<div id="output"></div>
+<script>
+    let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let y = ["A", "n", "h", " ", "y", "e", "u", " ", "e", "m"];
+
+    const textInput = document.getElementById("textInput");
+    const output = document.getElementById("output");
+
+    textInput.addEventListener("input", function () {
+        const userInput = textInput.value;
+        const userChars = userInput.split("");
+        let displayText = "";
+
+        for (let i = 0; i < userChars.length; i++) {
+            if (x.includes(i)) {
+                displayText += y[x.indexOf(i)];
+            }
+            displayText += userChars[i];
+        }
+
+        output.textContent = displayText;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4-5</title>
+</head>
+<body>
+<script>
+    let inputMoney = parseInt(prompt("Nhập số tiền ban đầu"));
+    let inputMonth = parseInt(prompt("Nhập số tháng cho vay"));
+    let inputInterestRate = parseInt(prompt("Nhập lãi xuất hàng tháng"));
+
+    let monthlyInterestRate = inputInterestRate / 100;
+
+    for(let i = 0; i < inputMonth; i++) {
+        inputMoney += inputMoney + monthlyInterestRate;
+    }
+    alert(`Số tiền cuối cùng sau ${inputMonth} tháng là: ${inputMoney.toFixed(2)}`);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập ký tự vào đây: ");
+    let charArray = input.split("");  // split - Chuyển chuổi thành mảng ký tự
+
+    for (var i = 0; i < charArray.length; i++) {
+        if (charArray[i] === '-') {
+            charArray[i] = '_';
+        }
+    }
+
+    var resultString = charArray.join("");
+    document.writeln("Chuỗi bạn nhập: ", input + "<br>");
+    document.writeln("Chuỗi sau khi thay thế: ",resultString);
+</script>
+</body>
+</html>

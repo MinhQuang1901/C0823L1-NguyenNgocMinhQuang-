@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trung Bình Điểm</title>
+</head>
+<body>
+<script>
+    var physicsScore = parseFloat(prompt("Nhập điểm vật lý"));
+    var chemistryScore = parseFloat(prompt("Nhập điểm hóa học"));
+    var biologyScore = parseFloat(prompt("Nhập điểm sinh học"));
+    var averageScore = (physicsScore + chemistryScore + biologyScore) / 3;
+    var totalScore = physicsScore + chemistryScore + biologyScore;
+    document.write('<h2>Kết quả</h2>');
+    document.write('Tổng điểm: ' + totalScore);
+    document.write('<br/>');
+    document.write('Trung bình điểm: ' + averageScore);
+</script>
+</body>
+</html>

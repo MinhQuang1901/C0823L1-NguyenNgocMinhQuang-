@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 8=7</title>
+</head>
+<body>
+<script>
+    var a = parseFloat(prompt("Nhập hệ số a "));
+    var b = parseFloat(prompt("Nhập hệ số b "));
+    var c = parseFloat(prompt("Nhập hệ số c "));
+
+    var delta = b*b - 4*a*c;
+    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+    var x = -b / (2 * a);
+
+    if (delta >0) {
+        alert("Phương trình có 2 nghiệm phân biệt x1 = " + x1 + ", x2 = "+ x2);
+    } else if (delta === 0) {
+        alert("Phương trình có 1 nghiệm kép x = " +x);
+    } else {
+        alert("Phương trình vô nghiệm");
+    }
+</script>
+</body>
+</html>

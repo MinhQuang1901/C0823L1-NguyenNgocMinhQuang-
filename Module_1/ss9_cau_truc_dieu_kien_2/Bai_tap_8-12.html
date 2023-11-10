@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 8-12</title>
+</head>
+<body>
+<script>
+    let money = prompt("Nhập số tiền vay ban đầu");
+    let time = prompt("Nhập số tháng cho vay lãi");
+    let lai = prompt("Nhập lãi xuất hàng tháng");
+
+    lai = lai /100;
+
+    let n = 12;
+
+    let A = money * Math.pow(1+lai / n, n* time);
+
+    alert("Tổng số tiền cuối cùng phải trả là: " + A.toFixed(2) + " triệu")
+
+
+</script>
+</body>
+</html>

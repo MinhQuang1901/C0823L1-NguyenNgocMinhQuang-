@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3-7</title>
+</head>
+<body>
+<script>
+    let num;
+    for (num=1;num<=100;num++){
+        if(num%3 ===0 && num%5 !==0){
+            document.write("Fizz"+"<br>");
+        } else if(num%3 !== 0 && num%5 ===0){
+            document.write("Buzz"+"<br>");
+        } else if (num%3 ===0 && num%5 ===0){
+            document.write("FizzBuzz"+"<br>");
+        } else {
+            document.write(num+"<br>")
+        }
+    }
+
+
+</script>
+</body>
+</html>

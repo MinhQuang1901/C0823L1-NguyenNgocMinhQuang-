@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #message {
+            position: absolute;
+            top: 100px;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+<h1 id="message">Do you love me</h1>
+<button id="yes-button" onclick="displayHeart()"><span>YES</span></button>
+<button id="no-button" onmouseover="moveNoButton()" style="position: absolute"><span>NO</span></button>
+
+<script>
+    function displayHeart() {
+        alert("Me too <3");
+    }
+
+    function moveNoButton() {
+        var noButton = document.getElementById("no-button");
+        var screenWidth = window.innerWidth;
+        var screenHeight = window.innerHeight;
+
+        var randomX = Math.random() * (screenWidth - 100);
+        var randomY = Math.random() * (screenHeight - 40);
+
+        noButton.style.left = randomX + "px";
+        noButton.style.top = randomY + "px";
+    }
+</script>
+</body>
+</html>

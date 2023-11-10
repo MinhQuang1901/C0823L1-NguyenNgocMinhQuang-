@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2-7</title>
+</head>
+<body>
+<script>
+    let inputNumber = prompt("Nhập 2 số nguyên vào đây (cách nhau bằng dấu , ),vd: 2 , 3 ");
+    let inputArray  = inputNumber.split(" , ");
+
+    let number1 = parseInt(inputArray[0].trim()); // đổi chỗ 2 số và loại bỏ khoảng trống
+    let number2 = parseInt(inputArray[1].trim());
+    function swapTwoIntegers (a , b) {
+        var temp = a;
+        a = b;
+        b = temp;
+        return [a , b];
+    }
+
+    var swappedNumbers = swapTwoIntegers(number1, number2);
+    alert(`Số sau khi đổi chỗ: ${swappedNumbers[0]}, ${swappedNumbers[1]}`);
+</script>
+</body>
+</html>

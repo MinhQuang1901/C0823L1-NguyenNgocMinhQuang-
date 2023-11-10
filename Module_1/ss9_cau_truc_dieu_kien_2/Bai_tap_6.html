@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game ghép tranh</title>
+</head>
+<style>
+    table {
+        border: 5px solid black;
+        border-collapse: collapse;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    img {
+        height: 100px;
+        width: 500px;
+    }
+</style>
+<body>
+<div class="image">
+    <table>
+        <tr>
+            <td><img id='img1' onclick="changeImage(1)" src="funny-cat1_part1x1.jpg" alt=''/></td>
+        </tr>
+        <tr>
+            <td><img id='img2' onclick="changeImage(2)" src="funny-cat1_part2x1.jpg" alt=''/></td>
+        </tr>
+        <tr>
+            <td><img id='img3' onclick="changeImage(3)" src="funny-cat1_part3x1.jpg" alt=''/></td>
+        </tr>
+        <tr>
+            <td><img id='img4' onclick="changeImage(4)" src="funny-cat1_part4x1.jpg" alt=''/></td>
+        </tr>
+        <tr>
+            <td><img id='img5' onclick="changeImage(5)" src="funny-cat1_part5x1.jpg" alt=''/></td>
+        </tr>
+    </table>
+</div>
+<script>
+    var index1 = 0;
+    var index2 = 0;
+    var index3 = 0;
+    var index4 = 0;
+    var index5 = 0;
+
+    function changeImage(imageIndex) {
+        let imgs = [
+            ["funny-cat1_part1x1.jpg", "monkey_part1x1.jpg", "panda_swap_part1x1.jpg"],
+            ["funny-cat1_part2x1.jpg", "monkey_part2x1.jpg", "panda_swap_part2x1.jpg"],
+            ["funny-cat1_part3x1.jpg", "monkey_part3x1.jpg", "panda_swap_part3x1.jpg"],
+            ["funny-cat1_part4x1.jpg", "monkey_part4x1.jpg", "panda_swap_part4x1.jpg"],
+            ["funny-cat1_part5x1.jpg", "monkey_part5x1.jpg", "panda_swap_part5x1.jpg"]
+        ];
+
+        var currentIndex;
+
+        switch (imageIndex) {
+            case 1:
+                currentIndex = index1;
+                index1 = (index1 + 1) % imgs[0].length;
+                break;
+            case 2:
+                currentIndex = index2;
+                index2 = (index2 + 1) % imgs[1].length;
+                break;
+            case 3:
+                currentIndex = index3;
+                index3 = (index3 + 1) % imgs[2].length;
+                break;
+            case 4:
+                currentIndex = index4;
+                index4 = (index4 + 1) % imgs[3].length;
+                break;
+            case 5:
+                currentIndex = index5;
+                index5 = (index5 + 1) % imgs[4].length;
+                break;
+            default:
+                break;
+        }
+        document.getElementById("img" + imageIndex).src = imgs[imageIndex - 1][(currentIndex + 1) % imgs[imageIndex - 1].length];
+    }
+</script>
+</body>
+</html>

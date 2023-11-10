@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h1>Caculator</h1><br>
+<form id="caculator">
+    <input type="text" name="number1" id="number1">
+    <input type="text" name="number2" id="number2">
+    <br/>
+    <br/>
+    <button type="button" onclick="addition()">Addition(+)</button>
+    <button type="button" onclick="subtraction()">Subtraction(-)</button>
+    <button type="button" onclick="multiplication()">Multiplication(X)</button>
+    <button type="button" onclick="division()">Division(/)</button>
+</form>
+<p id="result"></p>
+
+<script>
+    function addition() {
+        var num1 = parseFloat(document.getElementById("number1").value);
+        var num2 = parseFloat(document.getElementById("number2").value);
+        var result = num1 + num2;
+        document.getElementById("result").textContent = 'Result Division: ' + result;
+    }
+    function subtraction() {
+        var num1 = parseFloat(document.getElementById("number1").value);
+        var num2 = parseFloat(document.getElementById("number2").value);
+        var result = num1 - num2;
+        document.getElementById("result").textContent = 'Result Division: ' + result;
+    }
+    function multiplication() {
+        var num1 = parseFloat(document.getElementById("number1").value);
+        var num2 = parseFloat(document.getElementById("number2").value);
+        var result = num1 * num2;
+        document.getElementById("result").textContent ='Result Division: ' + result;
+    }
+    function division() {
+        var num1 = parseFloat(document.getElementById("number1").value);
+        var num2 = parseFloat(document.getElementById("number2").value);
+        if (num2 === 0){
+            document.getElementById('result').textContent = "Cannot divide by zero";
+        } else {
+            var result = num1 / num2;
+            document.getElementById('result').textContent ='Result Division: ' + result;
+        }
+    }
+</script>
+</body>
+</html>

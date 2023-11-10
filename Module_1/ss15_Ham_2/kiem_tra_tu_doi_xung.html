@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    function isPalindrome(s) {
+        // s.replace(/\s/g, '') - Loại bỏ khoảng trắng và
+        // toLowerCase() chuyển viết hoa về chữ thường để so sánh dễ dàng
+        s = s.replace(/\s/g, '').toLowerCase();
+
+        // Trường hợp cơ bản: Chuỗi rỗng hoặc chỉ còn một ký tự thì nó là Palindrome
+        if (s.length <= 1) {
+            return true;
+        }
+
+        // So sánh ký tự đầu và ký tự cuối của chuỗi
+        if (s[0] !== s[s.length - 1]) {
+            return false;
+        }
+
+        // Nếu ký tự đầu và ký tự cuối giống nhau, kiểm tra chuỗi con bên trong
+        return isPalindrome(s.slice(1, s.length - 1));
+    }
+
+    var input = prompt("Nhập ký tự vào đây");
+    var result = isPalindrome(input);
+
+    alert(result)
+
+</script>
+</body>
+</html>

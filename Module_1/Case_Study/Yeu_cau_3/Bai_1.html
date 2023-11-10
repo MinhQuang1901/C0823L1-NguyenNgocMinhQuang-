@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function prefixSums(a) {
+        let n = a.length;
+        let b = new Array(n);
+
+        if (n === 0) {
+            return [];
+        }
+
+        b[0] = a[0];
+
+        for (let i = 1; i < n; i++) {
+            b[i] = b[i - 1] + a[i];
+        }
+
+        return b;
+    }
+
+    const input = prompt("Nhập số vào đây");
+    const a = input.split(",").map(Number);
+
+    const b = prefixSums(a);
+    alert(b);
+
+</script>
+</body>
+</html>

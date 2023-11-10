@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let preTaxSalary = parseInt(prompt("Nhập tiền lương trước thuế của bạn "));
+
+    let tax = 0;
+
+    if (preTaxSalary === 15000) {
+        tax = preTaxSalary * 0.2;
+    } else if (7000 <= preTaxSalary < 15000) {
+        tax = preTaxSalary * 0.1;
+    } else if (preTaxSalary < 7000) {
+        tax = preTaxSalary * 0.05;
+    }
+
+    let afterTaxSalary = preTaxSalary - tax;
+
+
+    alert("Lương của bạn sau khi trừ thuế là " + afterTaxSalary);
+
+
+</script>
+</body>
+</html>
