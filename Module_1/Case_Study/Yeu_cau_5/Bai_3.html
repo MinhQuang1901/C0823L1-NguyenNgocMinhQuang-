@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gia tri lon nhat, gia tri nho nhat</title>
+</head>
+<body>
+<script>
+    function findMaxValueAndMinValue(arr) {
+        if (arr.length === 0 || arr[0].length === 0) {
+            return null;
+        }
+
+        let maxValue = arr[0][0];
+        let minValue = arr[0][0];
+
+        for(let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > maxValue) {
+                    maxValue = arr[i][j];
+                }
+
+                if (arr[i][j] < minValue) {
+                    minValue = arr[i][j];
+                }
+            }
+        }
+        return { maxValue, minValue};
+    }
+
+    let twoDimArray = [
+        [1, 2, 3],
+        [5, 8, 9],
+        [7, 10, 56]
+    ]
+
+    const result = findMaxValueAndMinValue(twoDimArray);
+    document.write(" Giá trị lớn nhất trong mảng 2 chiều là ", result.maxValue + "<br>");
+    document.write(" Giá trị nhỏ nhất trong mảng 2 chiều là ", result.minValue);
+
+</script>
+</body>
+</html>
