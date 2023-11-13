@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tam giác cân</title>
+</head>
+<body>
+<script>
+    function veTamGiacCanDac(h) {
+        for (let i = 0; i < h; i++) {
+            let line = '';
+            for (let j = 0; j < h - i - 1; j++) {
+                line += '&nbsp;&nbsp;&nbsp;';
+            }
+            for (let k = 0; k < 2 * i + 1; k++) {
+                line += '* ';
+            }
+            document.write(line + '<br>');
+        }
+    }
+
+    const chieuCao = prompt('Nhập chiều cao của tam giác cân: ');
+    veTamGiacCanDac(parseInt(chieuCao));
+
+</script>
+</body>
+</html>

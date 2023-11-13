@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function veTamGiacCanRong(h) {
+        for (let i = 0; i < h; i++) {
+            let line = '';
+            for (let j = 0; j < 2 * h - 1; j++) {
+                if (i === h - 1 || i + j === h - 1 || j - i === h - 1) {
+                    line += '* ';
+                } else {
+                    line += '&nbsp;&nbsp;&nbsp;';
+                }
+            }
+            document.write(line + '<br>');
+        }
+    }
+
+    const chieuCao = prompt('Nhập chiều cao của tam giác cân rỗng: ');
+    veTamGiacCanRong(parseInt(chieuCao));
+
+</script>
+</body>
+</html>
